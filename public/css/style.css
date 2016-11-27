@@ -482,14 +482,14 @@ input[type="color"],
 	position: absolute;
 	left: 0;
 	top: 1px;
-	content: "\f07a";
+	content: "\f0f5";
 	font-family: "FontAwesome";
 	font-size: 20px;
 	color: #333739;
 }
 
 .top .welcome-message a:before {
-	content: "\f007";
+	content: "\f0f5";
 	font-size: 19px;
 }
 
