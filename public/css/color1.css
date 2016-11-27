@@ -1,0 +1,128 @@
+
+/* Color
+-------------------------------------------------------------- */
+a,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+#mainnav > ul > li.current > a,
+#mainnav > ul > li > a:hover,
+#mainnav-mobi a:hover,
+#mainnav-mobi > ul > li.current > a,
+.breadcrumbs a:hover,
+.post .title-post a:hover,
+.post .more-link a,
+.widget ul li:hover a,
+.widget-search #searchsubmit,
+.widget-twitter ul li:before,
+.widget-twitter ul li a,
+.comment-meta a:hover,
+.comment-meta .comment-reply,
+.comment-respond .submit-wrap input,
+#footernav ul li a:hover,
+.roll-button.border,
+.roll-iconbox .icon,
+.roll-testimonials .name .live,
+.roll-newsletter #subscribe-msg .notification_error {
+    color: #b08e3b;
+}
+
+/* Border Color
+-------------------------------------------------------------- */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.post .more-link a,
+.top-slider .flexslider .flex-direction-nav li a:hover,
+.post-wrap .pagi-normal ul li a:hover,
+.post-wrap .pagi-normal ul li.active a,
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus,
+.roll-iconbox .icon,
+.roll-button.border.white:hover,
+.roll-team .detail,
+.roll-menu .food-filter li a,
+.roll-testimonials .avatar img,
+.roll-newsletter #subscribe-button:hover,
+.roll-button.border,
+.roll-button,
+.roll-button.white:hover,
+.comment-avatar,
+.comment-respond .submit-wrap input,
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span,
+.posts-masonry ul.post-filter li a,
+.galleries-masonry ul.gallery-filter li a,
+.posts-masonry ul.post-filter li a:hover,
+.posts-masonry ul.post-filter li.active a,
+.galleries-masonry ul.gallery-filter li a:hover,
+.galleries-masonry ul.gallery-filter li.active a,
+.widget-search #s,
+.widget ul li,
+.post-wrap .pagi-normal ul li a {
+	border-color: #b08e3b;
+}
+
+/* Background Color
+-------------------------------------------------------------- */
+.top-slider .flexslider .flex-direction-nav li a:hover,
+.post .type-post a:hover,
+.post .more-link a:hover,
+.top .cart-sub li.order-cart:hover,
+.post-wrap .pagi-normal ul li a:hover,
+.post-wrap .pagi-normal ul li.active a,
+.posts-masonry ul.post-filter li a:hover,
+.posts-masonry ul.post-filter li.active a,
+.galleries-masonry ul.gallery-filter li a:hover,
+.galleries-masonry ul.gallery-filter li.active a,
+.posts-masonry .post:hover .content-post,
+.roll-menu .food-filter li.active a,
+.roll-menu .food-filter li:hover a,
+.roll-menu .food-item.added:hover .add-cart,
+.roll-newsletter #subscribe-button:hover,
+.roll-team .social li a:hover,
+.roll-team .social li a.active,
+.roll-button,
+.roll-button.white:hover,
+.roll-button.border:hover,
+.go-top:hover,
+.flexslider .flex-direction-nav a:hover,
+.flexslider .flex-control-nav li a.flex-active,
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+    background-color: #b08e3b;
+}
+
+/* Shadow Color
+-------------------------------------------------------------- */
+.roll-menu .food-filter li.active a,
+.roll-menu .food-filter li:hover a,
+.roll-button.border:hover,
+.roll-button.white:hover,
+.posts-masonry ul.post-filter li a:hover,
+.posts-masonry ul.post-filter li.active a,
+.galleries-masonry ul.gallery-filter li a:hover,
+.galleries-masonry ul.gallery-filter li.active a,
+.post .more-link a:hover,
+.post-wrap .pagi-normal ul li a:hover,
+.post-wrap .pagi-normal ul li.active a {
+    -webkit-box-shadow: 0 0 0 26px #b08e3b inset;
+       -moz-box-shadow: 0 0 0 26px #b08e3b inset;
+            box-shadow: 0 0 0 26px #b08e3b inset;
+}

@@ -1,0 +1,732 @@
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+/* Smaller than standard 1200 */
+@media only screen and (max-width: 1199px) {
+    .header-wrap {
+        min-height: 67px;
+    }
+
+    .roll-row.enjoy-meal .img-chef6 {
+        left: -90px;
+    }
+
+    .roll-menu .food-discount .chef,
+    .roll-menu .food-discount .food-name,
+    .roll-menu .food-discount .discount-price {
+        width: 100%;
+        float: none;
+        text-align: left;
+    }
+
+    .roll-menu .food-discount .food-name h3,
+    .roll-menu .food-discount .discount-price {
+        padding-left: 120px;
+    }
+
+    .food-item-wrap {
+        text-align: center;
+    }
+
+    .roll-menu .food-item .food-price,
+    .roll-menu .food-item .food-detail,
+    .roll-menu .food-item .food-name {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .roll-menu .food-item .food-price {
+        margin-bottom: 20px;
+    }
+
+    .roll-menu .food-item .food-name h3,
+    .roll-menu .food-item .food-detail {
+        padding-left: 0;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Smaller than standard 992 */
+@media only screen and (max-width: 991px) {
+    .btn-menu {
+        display: block;
+    }
+
+    h1 {
+        font-size: 46px;
+        line-height: 56px;
+    }
+
+    h2 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    h3 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    h4 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    h5 {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    h6 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .roll-spacer {
+        height: 30px;
+    }
+
+    .roll-spacer.small {
+        height: 15px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0 0 22px;
+    }
+
+    .roll-row {
+        padding: 60px 0;
+    }
+
+    .page-content {
+        padding: 60px 0 60px;
+    }
+
+    .page-content .roll-titlebox {
+        padding-bottom: 60px;
+    }
+
+    .roll-row.what-is-burgerhouse {
+        padding: 0 0 60px;
+    }
+
+    .roll-row.lastest-posts {
+        padding: 60px 0 0;
+    }
+
+    .roll-row.enjoy-meal {
+        padding: 60px 0;
+    }
+
+    .roll-titlebox .maintitle,
+    .roll-callout-box h3 {
+        font-size: 36px;
+        line-height: 44px;
+        margin: 0 0 22px;
+    }
+
+    .roll-button,
+    .post .more-link a,
+    .roll-callout-box .buttons a,
+    .posts-masonry .load-more a,
+    .galleries-masonry .load-more a {
+        padding: 12px 50px;
+    }
+
+    .aside-image .image-container img {
+        display: none;
+    }
+
+    .roll-newsletter #subscribe-form {
+        margin-right: 0;
+    }
+
+    .roll-testimonials .avatar {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .roll-testimonials .name .live {
+        padding-left: 0;
+    }
+
+    .roll-testimonials .whisper {
+        margin: 40px 0 0;
+    }
+
+    .roll-testimonials .whisper::before,
+    .roll-testimonials .whisper::after {
+        border-color: transparent transparent #262c30 transparent;
+        border-style: solid;
+        border-width: 18px;
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -36px;
+        margin-left: -18px;
+    }
+
+    .roll-testimonials .whisper::after {
+        border-color: transparent transparent #191d20 transparent;
+        content: "";
+        position: absolute;
+        top: -35px;
+    }
+
+    .roll-testimonials .owl-controls {
+        margin-top: 40px;
+    }
+
+    .roll-testimonials .whisper {
+        font-size: 18px;
+        padding: 27px 30px 32px;
+    }
+
+    .aside-image .content-wrap,
+    .aside-image.right .content-wrap {
+        padding: 0;
+    }
+
+    .post-wrap .post {
+        padding-top: 50px;
+    }
+
+    .post .title-post {
+        font-size: 36px;
+    }
+
+    .sidebar {
+        margin-top: 80px;
+    }
+
+    .sidebar .widget {
+        margin-bottom: 50px;
+    }
+
+    .share-post span {
+        display: none;
+    }
+
+    .posts-masonry .posts-container .item {
+        width: 50%;
+    }
+
+    .roll-team {
+        margin-bottom: 50px;
+    }
+
+    .form-title {
+        margin-right: 0;
+    }
+
+    .form-contact-section,
+    .sign-in-section {
+        padding-top: 60px;
+    }
+
+    .sign-in-form {
+        padding-top: 30px;
+    }
+
+    .posts-masonry .posts-container .item,
+    .galleries-masonry .galleries-container .item {
+        width: 50%;
+    }
+
+    .roll-callout-box.aside .content,
+    .roll-callout-box.aside .buttons {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .roll-callout-box.aside .content {
+        margin-bottom: 30px;
+    }
+
+    .roll-callout-box .buttons a {
+        margin-left: 0;
+    }
+
+}
+
+/* Tablet Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+}
+
+/* Tablet Portrait Size */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* All Mobile Sizes */
+@media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 38px;
+        line-height: 52px;
+    }
+
+    h2 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    h3 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    h4 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    h5 {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    h6 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .roll-row {
+        padding: 40px 0;
+    }
+
+    .page-content {
+        padding: 40px 0 40px;
+    }
+
+    .page-content .roll-titlebox {
+        padding-bottom: 40px;
+    }
+
+    .roll-row.what-is-burgerhouse {
+        padding: 0 0 40px;
+    }
+
+    .roll-row.lastest-posts {
+        padding: 40px 0 0;
+    }
+
+    .roll-row.enjoy-meal {
+        padding: 40px 0;
+    }
+
+    .roll-spacer,
+    .roll-spacer.small {
+        height: 10px;
+    }
+
+    .roll-spacer.large {
+        height: 30px;
+    }
+
+    .roll-titlebox .maintitle,
+    .roll-callout-box h3 {
+        font-size: 30px;
+        line-height: 36px;
+        margin: 0 0 22px;
+    }
+
+    .roll-button,
+    .roll-callout-box .buttons a,
+    .post .more-link a,
+    .posts-masonry .load-more a,
+    .galleries-masonry .load-more a {
+        padding: 12px 40px;
+    }
+
+    .top .social {
+        float: none !important;
+        text-align: center;
+    }
+
+    .top .welcome {
+        display: none;
+    }
+
+    .footernav {
+        display: none;
+    }
+
+    .footer .copyr {
+        float: none !important;
+        text-align: center;
+    }
+
+    .post-wrap .post {
+        padding-top: 40px;
+    }
+
+    .post .title-post {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .blog-slider .flexslider .flex-direction-nav a {
+        height: 50px;
+        margin-top: -25px;
+        width: 50px;
+    }
+
+    .blog-slider .flexslider .flex-direction-nav i {
+        font-size: 28px;
+        line-height: 48px;
+    }
+
+    .posts-masonry .posts-container .item,
+    .posts-masonry .posts-container .item.w2 {
+        width: 100%;
+    }
+
+    .roll-team {
+        margin-bottom: 20px;
+    }
+
+    .form-contact-section,
+    .sign-in-section {
+        padding-top: 40px;
+    }
+
+    .sign-in-form {
+        padding-top: 10px;
+    }
+
+    .galleries-masonry .galleries-container .item.w3 {
+        width: 50%;
+    }
+
+}
+
+/* Mobile Landscape Size */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+/* Mobile Portrait Size */
+@media only screen and (max-width: 479px) {
+    h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    h4 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    h5 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    h6 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0 0 15px;
+    }
+
+    .roll-spacer.verysmall {
+        height: 10px;
+    }
+
+    .roll-titlebox .maintitle,
+    .roll-callout-box h3 {
+        font-size: 20px;
+        line-height: 28px;
+        margin: 0 0 15px;
+    }
+
+    .roll-row {
+        padding: 30px 0;
+    }
+
+    .roll-row.what-is-burgerhouse {
+        padding: 0 0 30px;
+    }
+
+    .roll-row.lastest-posts {
+        padding: 30px 0 0;
+    }
+
+    .roll-row.enjoy-meal {
+        padding: 30px 0;
+    }
+
+    .roll-testimonials .whisper {
+        font-size: 16px;
+        padding: 20px 25px 28px;
+    }
+
+    .roll-testimonials .name {
+        font-size: 18px;
+    }
+
+    .roll-button,
+    .post .more-link a,
+    .roll-callout-box .buttons a,
+    .posts-masonry .load-more a,
+    .galleries-masonry .load-more a {
+        padding: 10px 30px;
+    }
+
+    .post .main-post {
+        margin-left: 96px;
+    }
+
+    .post .type-post {
+        margin-right: 26px;
+    }
+
+    .post .title-post {
+        font-size: 20px;
+        line-height: 28px;
+        margin: -4px 0 10px;
+    }
+
+    .post .meta-post {
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+
+    .post .more-link a {
+        padding: 10px 30px;
+    }
+
+    .post .type-post {
+        display: none;
+    }
+
+    .post .main-post {
+        margin-left: 0;
+    }
+
+    .comment-avatar {
+        height: 50px;
+        width: 50px;
+    }
+
+    .post .entry-post blockquote {
+        width: 100%;
+    }
+
+    .form-contact-section,
+    .sign-in-section {
+        padding-top: 30px;
+    }
+
+    .galleries-masonry .galleries-container .item,
+    .galleries-masonry .galleries-container .item.w3 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .team-group [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/* Retina Devices */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (   -moz-min-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx) {
+    .header .logo-wrap {
+        background: url(../images/logo-wrap@2x.png) no-repeat top center;
+        background-size: 326px 170px;
+    }
+
+    .btn-menu {
+        background: url(../images/mobile-btn@2x.png) no-repeat center center;
+        background-size: 69px 45px;
+    }
+
+    .top-slider .mask,
+    .roll-row .mask,
+    .page-slider .mask {
+        background: url(../images/mask@2x.png);
+        background-size: 2px 2px;
+    }
+
+    .posts-masonry .featured-post .link,
+    .galleries-masonry .featured-post .link,
+    .roll-team .link,
+    .roll-posts-carousel .item .link {
+        background: url(../images/link@2x.png) no-repeat center center;
+        background-size: 20px 23px;
+    }
+
+}
+
+/* Media Queries - Top Slider
+-------------------------------------------------------------- */
+@media only screen and (max-width: 991px) {
+    .top-slider .flexslider .slides li {
+        height: 430px;
+    }
+
+    .top-slider .flexslider .slide1 .flex_caption .heading1 {
+        margin: 140px 0 0 0
+    }
+
+    .top-slider .flexslider .slide1 .flex_caption .heading2 {
+        margin: 20px 0 0 0
+    }
+
+    .top-slider .flexslider .slide1 .flex_caption .button1 {
+        margin: 30px 0 0 0
+    }
+
+    .top-slider .flexslider .slide2 .heading1 {
+        margin: 120px 370px 0 0;
+    }
+
+    .top-slider .flexslider .slide2 .heading2 {
+        margin: 0 90px 0 0;
+    }
+
+    .top-slider .flexslider .slide2 .heading3 {
+        margin: 0 0 0 130px;
+    }
+
+    .top-slider .flexslider .slide2 .heading4 {
+        margin: 0 0 0 414px;
+    }
+
+    .top-slider .flexslider .slide3 .heading1 {
+        margin: 147px 0 0;
+    }
+
+    .top-slider .flexslider .slide3 .button1 {
+        margin: 33px 0 0;
+    }
+
+    .top-slider .flexslider .flex_caption h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .top-slider .flexslider .flex_caption h2 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .top-slider .flexslider .flex_caption .button a {
+        padding: 12px 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .top-slider .flexslider .slides li {
+        height: 320px;
+    }
+
+    .top-slider .flexslider .slides .flex_caption {
+        margin: 0 15px;
+    }
+
+    .top-slider .flexslider .flex_caption h1.boxed {
+        padding: 8px 16px;
+    }
+
+    .top-slider .flexslider .flex_caption h1 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .top-slider .flexslider .flex_caption h2 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .top-slider .flexslider .flex_caption .button a {
+        font-size: 12px;
+        padding: 6px 32px;
+    }
+
+    .top-slider .flexslider .slide1 .flex_caption .heading1 {
+        margin: 116px 0 0 0;
+    }
+
+    .top-slider .flexslider .slide1 .flex_caption .heading2 {
+        margin: 12px 0 0 0;
+    }
+
+    .top-slider .flexslider .slide1 .flex_caption .button1 {
+        margin: 16px 0 0 0;
+    }
+
+    .top-slider .flexslider .slide2 .heading1 {
+        margin: 80px 316px 0 0;
+    }
+
+    .top-slider .flexslider .slide2 .heading2 {
+        margin: 0 90px 0 0;
+    }
+
+    .top-slider .flexslider .slide2 .heading3 {
+        margin: 0 0 0 90px;
+    }
+
+    .top-slider .flexslider .slide2 .heading4 {
+        margin: 0 0 0 317px;
+    }
+
+    .top-slider .flexslider .slide3 .heading1 {
+        margin: 115px 0 0;
+    }
+
+    .top-slider .flexslider .slide3 .button1 {
+        margin: 20px 0 0;
+    }
+
+}
+
+@media (max-width: 479px) {
+    .top-slider .flexslider .flex_caption h1.boxed {
+        padding: 4px 11px;
+    }
+
+    .top-slider .flexslider .flex_caption h1 {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .top-slider .flexslider .slide2 .heading1 {
+        margin: 110px 114px 0 0;
+    }
+
+    .top-slider .flexslider .slide2 .heading2 {
+        margin: 0 -77px 0 0;
+    }
+
+    .top-slider .flexslider .slide2 .heading3 {
+        margin: 0 0 0 -74px;
+    }
+
+    .top-slider .flexslider .slide2 .heading4 {
+        margin: 0 0 0 121px;
+    }
+
+}

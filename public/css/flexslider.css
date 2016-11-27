@@ -1,0 +1,246 @@
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;}
+.flexslider .slides img {width: 100%; display: block;}
+.flex-control-thumbs img {cursor:pointer;}
+.flex-pauseplay span {text-transform: capitalize;}
+.slides:after {content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
+* html .slides {height: 1%;}
+.no-js .slides > li:first-child {display: block;}
+.flexslider {overflow:hidden; position: relative; z-index:2;}
+.flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
+.flexslider.loading { background: #fff url(../images/loader.gif) no-repeat center center; }
+.loading .flex-viewport { max-height: 300px; }
+.flexslider .slides { zoom: 1; }
+.carousel li { margin-right: 5px; }
+
+/* Direction Nav
+*********************************/
+.flexslider .flex-direction-nav a {
+    text-align: center;
+    display: block;
+    width: 70px;
+    height: 70px;
+    outline: 0;
+    top: 50%;
+    margin-top: -35px;
+    background-color: #191d20;
+    color: #fff;
+}
+
+.flexslider .flex-direction-nav a:hover,
+.flexslider .flex-direction-nav a:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
+.flexslider .flex-direction-nav .flex-prev {
+    position: absolute;
+    left: 0;
+}
+
+.flexslider .flex-direction-nav .flex-next {
+    position: absolute;
+    right: 0;
+}
+
+.flexslider .flex-direction-nav i {
+    font-size: 40px;
+    line-height: 66px;
+}
+
+/* Control Nav
+*********************************/
+.flexslider .flex-control-nav {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.flexslider .flex-control-nav li {
+    margin: 0 5px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+.flexslider .flex-control-nav li a {
+    width: 12px;
+    height: 12px;
+    display: block;
+    background: #191d20;
+    cursor: pointer;
+    text-indent: -9999px;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+         -o-border-radius: 50%;
+            border-radius: 50%;
+}
+
+/* Effects
+*********************************/
+.FromTop, .FromTopScale, .FromTopRotate, .FromTopRotateScale,
+.FromBottom, .FromBottomScale, .FromBottomRotate, .FromBottomRotateScale,
+.FromLeft, .FromLeftScale, .FromLeftRotate, .FromLeftRotateScale,
+.FromRight, .FromRightScale, .FromRightRotate, .FromRightRotateScale {
+    opacity: 0;
+    -webkit-transition: all 0.7s ease-in-out;
+       -moz-transition: all 0.7s ease-in-out;
+        -ms-transition: all 0.7s ease-in-out;
+         -o-transition: all 0.7s ease-in-out;
+            transition: all 0.7s ease-in-out;
+}
+
+/* FromTop */
+.flexslider li .FromTop {-webkit-transform: translateY(-200px); -moz-transition: translateY(-200px); -ms-transform: translateY(-200px); -o-transform: translateY(-200px); transform: translateY(-200px);}
+.flexslider li.flex-active-slide .FromTop {opacity: 1; -webkit-transform: translateY(0); -moz-transition: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0);}
+/* FromTopScale */
+.flexslider li .FromTopScale {-webkit-transform: translateY(-200px) scale(5); -moz-transition: translateY(-200px) scale(5); -ms-transform: translateY(-200px) scale(5); -o-transform: translateY(-200px) scale(5); transform: translateY(-200px) scale(5);}
+.flexslider li.flex-active-slide .FromTopScale {opacity: 1; -webkit-transform: translateY(0) scale(1); -moz-transition: translateY(0) scale(1); -ms-transform: translateY(0) scale(1); -o-transform: translateY(0) scale(1); transform: translateY(0) scale(1);}
+/* FromTopRotate */
+.flexslider li .FromTopRotate {-webkit-transform: translateY(-200px) rotate(180deg); -moz-transition: translateY(-200px) rotate(180deg); -ms-transform: translateY(-200px) rotate(180deg); -o-transform: translateY(-200px) rotate(180deg); transform: translateY(-200px) rotate(180deg);}
+.flexslider li.flex-active-slide .FromTopRotate { opacity: 1; -webkit-transform: translateY(0) rotate(0deg); -moz-transition: translateY(0) rotate(0deg); -ms-transform: translateY(0) rotate(0deg); -o-transform: translateY(0) rotate(0deg); transform: translateY(0) rotate(0deg);}
+/* FromTopRotateScale */
+.flexslider li .FromTopRotateScale {-webkit-transform: translateY(200px) rotate(180deg) scale(5); -moz-transition: translateY(200px) rotate(180deg) scale(5); -ms-transform: translateY(200px) rotate(180deg) scale(5); -o-transform: translateY(200px) rotate(180deg) scale(5); transform: translateY(200px) rotate(180deg) scale(5);}
+.flexslider li.flex-active-slide .FromTopRotateScale {opacity: 1; -webkit-transform: translateY(0) rotate(0deg) scale(1); -moz-transition: translateY(0) rotate(0deg) scale(1); -ms-transform: translateY(0) rotate(0deg) scale(1); -o-transform: translateY(0) rotate(0deg) scale(1); transform: translateY(0) rotate(0deg) scale(1);}
+
+/* FromBottom */
+.flexslider li .FromBottom {-webkit-transform: translateY(200px); -moz-transition: translateY(200px); -ms-transform: translateY(200px); -o-transform: translateY(200px); transform: translateY(200px);}
+.flexslider li.flex-active-slide .FromBottom {opacity: 1; -webkit-transform: translateY(0); -moz-transition: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0);}
+/* FromBottomScale */
+.flexslider li .FromBottomScale {-webkit-transform: translateY(200px) scale(5); -moz-transition: translateY(200px) scale(5); -ms-transform: translateY(200px) scale(5); -o-transform: translateY(200px) scale(5); transform: translateY(200px) scale(5);}
+.flexslider li.flex-active-slide .FromBottomScale {opacity: 1; -webkit-transform: translateY(0) scale(1); -moz-transition: translateY(0) scale(1); -ms-transform: translateY(0) scale(1); -o-transform: translateY(0) scale(1); transform: translateY(0) scale(1);}
+/* FromBottomRotate */
+.flexslider li .FromBottomRotate {-webkit-transform: translateY(200px) rotate(180deg); -moz-transition: translateY(200px) rotate(180deg); -ms-transform: translateY(200px) rotate(180deg); -o-transform: translateY(200px) rotate(180deg); transform: translateY(200px) rotate(180deg);}
+.flexslider li.flex-active-slide .FromBottomRotate {opacity: 1; -webkit-transform: translateY(0) rotate(0deg); -moz-transition: translateY(0) rotate(0deg); -ms-transform: translateY(0) rotate(0deg); -o-transform: translateY(0) rotate(0deg); transform: translateY(0) rotate(0deg);}
+/* FromBottomRotateScale */
+.flexslider li .FromBottomRotateScale {-webkit-transform: translateY(200px) rotate(180deg) scale(5); -moz-transition: translateY(200px) rotate(180deg) scale(5); -ms-transform: translateY(200px) rotate(180deg) scale(5); -o-transform: translateY(200px) rotate(180deg) scale(5); transform: translateY(200px) rotate(180deg) scale(5);}
+.flexslider li.flex-active-slide .FromBottomRotateScale {opacity: 1; -webkit-transform: translateY(0) rotate(0deg) scale(1); -moz-transition: translateY(0) rotate(0deg) scale(1); -ms-transform: translateY(0) rotate(0deg) scale(1); -o-transform: translateY(0) rotate(0deg) scale(1); transform: translateY(0) rotate(0deg) scale(1);}
+
+/* FromLeft */
+.flexslider li .FromLeft {-webkit-transform: translateX(-500px); -moz-transition: translateX(-500px); -ms-transform: translateX(-500px); -o-transform: translateX(-500px); transform: translateX(-500px);}
+.flexslider li.flex-active-slide .FromLeft {opacity: 1; -webkit-transform: translateX(0); -moz-transition: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0);}
+/* FromLeftScale */
+.flexslider li .FromLeftScale {-webkit-transform: translateX(-500px) scale(5); -moz-transition: translateX(-500px) scale(5); -ms-transform: translateX(-500px) scale(5); -o-transform: translateX(-500px) scale(5); transform: translateX(-500px) scale(5);}
+.flexslider li.flex-active-slide .FromLeftScale { opacity: 1; -webkit-transform: translateX(0) scale(1); -moz-transition: translateX(0) scale(1); -ms-transform: translateX(0) scale(1); -o-transform: translateX(0) scale(1); transform: translateX(0) scale(1);}
+/* FromLeftRotate */
+.flexslider li .FromLeftRotate {-webkit-transform: translateX(-500px) rotate(180deg); -moz-transition: translateX(-500px) rotate(180deg); -ms-transform: translateX(-500px) rotate(180deg); -o-transform: translateX(-500px) rotate(180deg); transform: translateX(-500px) rotate(180deg);}
+.flexslider li.flex-active-slide .FromLeftRotate {opacity: 1; -webkit-transform: translateX(0) rotate(0deg); -moz-transition: translateX(0) rotate(0deg); -ms-transform: translateX(0) rotate(0deg); -o-transform: translateX(0) rotate(0deg); transform: translateX(0) rotate(0deg);}
+/* FromLeftRotateScale */
+.flexslider li .FromLeftRotateScale {-webkit-transform: translateX(-500px) rotate(180deg) scale(5); -moz-transition: translateX(-500px) rotate(180deg) scale(5); -ms-transform: translateX(-500px) rotate(180deg) scale(5); -o-transform: translateX(-500px) rotate(180deg) scale(5); transform: translateX(-500px) rotate(180deg) scale(5);}
+.flexslider li.flex-active-slide .FromLeftRotateScale {opacity: 1; -webkit-transform: translateX(0) rotate(0deg) scale(1); -moz-transition: translateX(0) rotate(0deg) scale(1); -ms-transform: translateX(0) rotate(0deg) scale(1); -o-transform: translateX(0) rotate(0deg) scale(1); transform: translateX(0) rotate(0deg) scale(1);}
+
+/* FromRight */
+.flexslider li .FromRight {-webkit-transform: translateX(500px); -moz-transition: translateX(500px); -ms-transform: translateX(500px); -o-transform: translateX(500px); transform: translateX(500px);}
+.flexslider li.flex-active-slide .FromRight {opacity: 1; -webkit-transform: translateX(0); -moz-transition: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0);}
+/* FromRightScale */
+.flexslider li .FromRightScale {-webkit-transform: translateX(500px) scale(5); -moz-transition: translateX(500px) scale(5); -ms-transform: translateX(500px) scale(5); -o-transform: translateX(500px) scale(5); transform: translateX(500px) scale(5);}
+.flexslider li.flex-active-slide .FromRightScale {opacity: 1; -webkit-transform: translateX(0) scale(1); -moz-transition: translateX(0) scale(1); -ms-transform: translateX(0) scale(1); -o-transform: translateX(0) scale(1); transform: translateX(0) scale(1);}
+/* FromRightRotate */
+.flexslider li .FromRightRotate {-webkit-transform: translateX(500px) rotate(180deg); -moz-transition: translateX(500px) rotate(180deg); -ms-transform: translateX(500px) rotate(180deg); -o-transform: translateX(500px) rotate(180deg); transform: translateX(500px) rotate(180deg);}
+.flexslider li.flex-active-slide .FromRightRotate {opacity: 1; -webkit-transform: translateX(0) rotate(0deg); -moz-transition: translateX(0) rotate(0deg); -ms-transform: translateX(0) rotate(0deg); -o-transform: translateX(0) rotate(0deg); transform: translateX(0) rotate(0deg);}
+/* FromRightRotateScale */
+.flexslider li .FromRightRotateScale {-webkit-transform: translateX(500px) rotate(180deg) scale(5); -moz-transition: translateX(500px) rotate(180deg) scale(5); -ms-transform: translateX(500px) rotate(180deg) scale(5); -o-transform: translateX(500px) rotate(180deg) scale(5); transform: translateX(500px) rotate(180deg) scale(5);}
+.flexslider li.flex-active-slide .FromRightRotateScale {opacity: 1; -webkit-transform: translateX(0) rotate(0deg) scale(1); -moz-transition: translateX(0) rotate(0deg) scale(1); -ms-transform: translateX(0) rotate(0deg) scale(1); -o-transform: translateX(0) rotate(0deg) scale(1); transform: translateX(0) rotate(0deg) scale(1);}
+
+/* easeInOutBack */
+.flexslider li.flex-active-slide .FromBottom.easeInOutBack,
+.flexslider li.flex-active-slide .FromBottomScale.easeInOutBack,
+.flexslider li.flex-active-slide .FromBottomRotate.easeInOutBack,
+.flexslider li.flex-active-slide .FromBottomRotateScale.easeInOutBack,
+.flexslider li.flex-active-slide .FromTop.easeInOutBack,
+.flexslider li.flex-active-slide .FromTopScale.easeInOutBack,
+.flexslider li.flex-active-slide .FromTopRotate.easeInOutBack,
+.flexslider li.flex-active-slide .FromTopRotateScale.easeInOutBack,
+.flexslider li.flex-active-slide .FromLeft.easeInOutBack,
+.flexslider li.flex-active-slide .FromLeftScale.easeInOutBack,
+.flexslider li.flex-active-slide .FromLeftRotate.easeInOutBack,
+.flexslider li.flex-active-slide .FromLeftRotateScale.easeInOutBack,
+.flexslider li.flex-active-slide .FromRight.easeInOutBack,
+.flexslider li.flex-active-slide .FromRightScale.easeInOutBack,
+.flexslider li.flex-active-slide .FromRightRotate.easeInOutBack,
+.flexslider li.flex-active-slide .FromRightRotateScale.easeInOutBack {
+    -webkit-transition-duration: 1.2s;
+            transition-duration: 1.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+       -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+         -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+            transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+/* easeOutBack */
+.flexslider li.flex-active-slide .FromBottom.easeOutBack,
+.flexslider li.flex-active-slide .FromBottomScale.easeOutBack,
+.flexslider li.flex-active-slide .FromBottomRotate.easeOutBack,
+.flexslider li.flex-active-slide .FromBottomRotateScale.easeOutBack,
+.flexslider li.flex-active-slide .FromTop.easeOutBack,
+.flexslider li.flex-active-slide .FromTopScale.easeOutBack,
+.flexslider li.flex-active-slide .FromTopRotate.easeOutBack,
+.flexslider li.flex-active-slide .FromTopRotateScale.easeOutBack,
+.flexslider li.flex-active-slide .FromLeft.easeOutBack,
+.flexslider li.flex-active-slide .FromLeftScale.easeOutBack,
+.flexslider li.flex-active-slide .FromLeftRotate.easeOutBack,
+.flexslider li.flex-active-slide .FromLeftRotateScale.easeOutBack,
+.flexslider li.flex-active-slide .FromRight.easeOutBack,
+.flexslider li.flex-active-slide .FromRightScale.easeOutBack,
+.flexslider li.flex-active-slide .FromRightRotate.easeOutBack,
+.flexslider li.flex-active-slide .FromRightRotateScale.easeOutBack {
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+       -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+         -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+}
+
+/* easeInOutExpo */
+.flexslider li.flex-active-slide .FromBottom.easeInOutExpo,
+.flexslider li.flex-active-slide .FromBottomScale.easeInOutExpo,
+.flexslider li.flex-active-slide .FromBottomRotate.easeInOutExpo,
+.flexslider li.flex-active-slide .FromBottomRotateScale.easeInOutExpo,
+.flexslider li.flex-active-slide .FromTop.easeInOutExpo,
+.flexslider li.flex-active-slide .FromTopScale.easeInOutExpo,
+.flexslider li.flex-active-slide .FromTopRotate.easeInOutExpo,
+.flexslider li.flex-active-slide .FromTopRotateScale.easeInOutExpo,
+.flexslider li.flex-active-slide .FromLeft.easeInOutExpo,
+.flexslider li.flex-active-slide .FromLeftScale.easeInOutExpo,
+.flexslider li.flex-active-slide .FromLeftRotate.easeInOutExpo,
+.flexslider li.flex-active-slide .FromLeftRotateScale.easeInOutExpo,
+.flexslider li.flex-active-slide .FromRight.easeInOutExpo,
+.flexslider li.flex-active-slide .FromRightScale.easeInOutExpo,
+.flexslider li.flex-active-slide .FromRightRotate.easeInOutExpo,
+.flexslider li.flex-active-slide .FromRightRotateScale.easeInOutExpo {
+    -webkit-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+       -moz-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+         -o-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+            transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */
+}
+
+.captionDelay1 {transition-delay: 0.1s; -webkit-transition-delay: 0.1s;}
+.captionDelay2 {transition-delay: 0.2s; -webkit-transition-delay: 0.2s;}
+.captionDelay3 {transition-delay: 0.3s; -webkit-transition-delay: 0.3s;}
+.captionDelay4 {transition-delay: 0.4s; -webkit-transition-delay: 0.4s;}
+.captionDelay5 {transition-delay: 0.5s; -webkit-transition-delay: 0.5s;}
+.captionDelay6 {transition-delay: 0.6s; -webkit-transition-delay: 0.6s;}
+.captionDelay7 {transition-delay: 0.7s; -webkit-transition-delay: 0.7s;}
+.captionDelay8 {transition-delay: 0.8s; -webkit-transition-delay: 0.8s;}
+.captionDelay9 {transition-delay: 0.9s; -webkit-transition-delay: 0.9s;}
+.captionDelay10 {transition-delay: 1s; -webkit-transition-delay: 1s;}
+
