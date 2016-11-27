@@ -1,3 +1,25 @@
+/**
+ * removePreloader
+ * postCarousel
+ * testimonialCarousel
+ * topSlider
+ * blogSlider
+ * blogMasonry
+ * galleryMasonry
+ * ajaxContactForm
+ * foodIsotope
+ * parallax
+ * rollAnimation
+ * goTop
+ * lastestTweets
+ * flickrFeed
+ * detectViewport
+ * popupTeam
+ * gmapSetup
+ * ajaxSubscribe
+ * responsiveMenu
+ * spacingMenu
+ */
 
 ;(function($) {
 
@@ -28,7 +50,7 @@
         $('.preloader').css('opacity', 0);
         setTimeout(function() {
             $('.preloader').hide();}, 600
-        );   
+        );
     };
 
     var retinaLogos = function() {
@@ -77,7 +99,7 @@
                 animation           : "fade",
                 controlNav          : false,
                 directionNav        : false,
-                pauseOnHover        : false, 
+                pauseOnHover        : false,
                 pauseOnAction       : true,
                 slideshow           : true,
                 animationSpeed      : 500,
@@ -148,24 +170,24 @@
                 el.addClass('loading').text('Loading...');
 
                 $.ajax({
-                    type: "GET",
-                    url: url,
-                    dataType: "html",
-                    async: false,   // wait result
-                    data : { page : page }
-                })
-                .done(function (data) {
-                    if ( data != null ) {
-                        var newitem = $(data);
-                        $container.append(newitem).isotope('appended', newitem);
-                        el.removeClass('loading').text('Load more');
-                        page = page + 1;
-                        el.attr({'data-page': page, 'href': './ajax/b' + page + '.html'});
-                    }
-                })
-                .fail(function () {
-                    el.text('No more posts to load.');
-                })
+                        type: "GET",
+                        url: url,
+                        dataType: "html",
+                        async: false,   // wait result
+                        data : { page : page }
+                    })
+                    .done(function (data) {
+                        if ( data != null ) {
+                            var newitem = $(data);
+                            $container.append(newitem).isotope('appended', newitem);
+                            el.removeClass('loading').text('Load more');
+                            page = page + 1;
+                            el.attr({'data-page': page, 'href': './ajax/b' + page + '.html'});
+                        }
+                    })
+                    .fail(function () {
+                        el.text('No more posts to load.');
+                    })
             });
 
         };
@@ -202,35 +224,35 @@
                 el.addClass('loading').text('Loading...');
 
                 $.ajax({
-                    type: "GET",
-                    url: url,
-                    dataType: "html",
-                    async: false,   // wait result
-                    data : { page : page }
-                })
-                .done(function (data) {
-                    if ( data != null ) {
-                        var newitem = $(data).find('.w4');
+                        type: "GET",
+                        url: url,
+                        dataType: "html",
+                        async: false,   // wait result
+                        data : { page : page }
+                    })
+                    .done(function (data) {
+                        if ( data != null ) {
+                            var newitem = $(data).find('.w4');
 
-                        if ( el.is('.w3') )
-                            newitem = $(data).find('.w3');
+                            if ( el.is('.w3') )
+                                newitem = $(data).find('.w3');
 
-                        $container.append(newitem).isotope('appended', newitem);
-                        el.removeClass('loading').text('Load more');
-                        page = page + 1;
-                        el.attr({'data-page': page, 'href': './ajax/g' + page + '.html'});
-                    }
-                })
-                .fail(function () {
-                    el.text('No more posts to load.');
-                })
+                            $container.append(newitem).isotope('appended', newitem);
+                            el.removeClass('loading').text('Load more');
+                            page = page + 1;
+                            el.attr({'data-page': page, 'href': './ajax/g' + page + '.html'});
+                        }
+                    })
+                    .fail(function () {
+                        el.text('No more posts to load.');
+                    })
             });
 
         };
     };
 
     var ajaxContactForm = function() {
-        if ( $().validate ) {        
+        if ( $().validate ) {
             $('.roll-contact-form').each(function() {
                 $(this).validate({
                     submitHandler: function( form ) {
@@ -316,13 +338,13 @@
     var parallax = function() {
         var iOS = navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false;
 
-        /* Please note that background attachment fixed doesn't work on iOS */ 
+        /* Please note that background attachment fixed doesn't work on iOS */
         if ( !iOS ) {
             $('.parallax').css({backgroundAttachment:'fixed'});
         } else {
             $('.parallax').css({backgroundAttachment:'scroll'});
         }
-        
+
         if ( $().parallax && isMobile.any() == null ) {
             $('.parallax-bg1').parallax("50%", 0.5);
             $('.parallax-bg2').parallax("50%", 0.3);
@@ -368,7 +390,7 @@
             } else {
                 $('.go-top').removeClass('show');
             }
-        }); 
+        });
 
         $('.go-top').on('click', function() {
             $("html, body").animate({ scrollTop: 0 }, 1000 , 'easeInOutExpo');
@@ -388,7 +410,7 @@
                     count: $this.data('number'),
                     template: "{text}{time}",
                     loading_text: "loading tweets...",
-                    modpath: $this.data('modpath')      
+                    modpath: $this.data('modpath')
                 }); // tweet
             }
             if ( $().newsTicker ) {
@@ -407,7 +429,7 @@
                 $(this).jflickrfeed({
                     limit: 6,
                     qstrings: {
-                    id: '130700496@N03' // Your Flickr Id
+                        id: '130700496@N03' // Your Flickr Id
                     },
                     itemTemplate: '<li><a href="{{link}}" title="{{title}}" target="_blank"><img src="{{image_s}}" alt="{{title}}" /></a></li>'
                 });
@@ -452,10 +474,10 @@
                     address:  "3 London Rd London SE1 6JZ United Kingdom",
                     callback: function(results) {
                         if ( !results ) return;
-                            $(this).gmap3('get').setCenter(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
-                            $(this).gmap3({
+                        $(this).gmap3('get').setCenter(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
+                        $(this).gmap3({
                             marker:{
-                            latLng:results[0].geometry.location
+                                latLng:results[0].geometry.location
                             }
                         });
                     }
@@ -509,7 +531,7 @@
                 type: 'POST',
                 dataType: 'json',
                 data: {
-                   subscribeEmail: objUse.subscribeEmail.val()
+                    subscribeEmail: objUse.subscribeEmail.val()
                 },
                 success: function (responseData, textStatus, jqXHR) {
                     if ( responseData.status ) {
@@ -608,7 +630,7 @@
         lastLi.find('a').css('paddingRight', 0);
         spacingLi.css('width', 285);
     };
-    
+
     // Dom Ready
     $(function() {
         responsiveMenu();
