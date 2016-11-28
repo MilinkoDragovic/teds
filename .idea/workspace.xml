@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f740f3e2-9b71-404e-9cfb-13f2b676af08" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/events.twig" afterPath="$PROJECT_DIR$/resources/views/specials.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/Controllers/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/responsive.css" afterPath="$PROJECT_DIR$/public/css/responsive.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/shortcodes.css" afterPath="$PROJECT_DIR$/public/css/shortcodes.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/about.twig" afterPath="$PROJECT_DIR$/resources/views/about.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home.twig" afterPath="$PROJECT_DIR$/resources/views/home.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/menu.twig" afterPath="$PROJECT_DIR$/resources/views/menu.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/templates/partials/footer.twig" afterPath="$PROJECT_DIR$/resources/views/templates/partials/footer.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/templates/partials/navigation.twig" afterPath="$PROJECT_DIR$/resources/views/templates/partials/navigation.twig" />
     </list>
     <ignored path="ted.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,8 +64,8 @@
       <file leaf-file-name="menu.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/menu.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="666" column="0" selection-start-line="666" selection-start-column="0" selection-end-line="666" selection-end-column="0" />
+            <state relative-caret-position="311">
+              <caret line="987" column="42" selection-start-line="987" selection-start-column="42" selection-end-line="987" selection-end-column="54" />
               <folding>
                 <element signature="e#33135#33195#0#HTML" expanded="true" />
                 <element signature="e#37929#37989#0#HTML" expanded="true" />
@@ -95,7 +85,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/templates/partials/footer.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -115,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="2040" column="14" selection-start-line="2040" selection-start-column="14" selection-end-line="2040" selection-end-column="14" />
+            <state relative-caret-position="300">
+              <caret line="994" column="68" selection-start-line="994" selection-start-column="68" selection-end-line="994" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -180,14 +170,14 @@
         <option value="$PROJECT_DIR$/resources/views/gallery.twig" />
         <option value="$PROJECT_DIR$/resources/views/about.twig" />
         <option value="$PROJECT_DIR$/public/css/responsive.css" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/css/shortcodes.css" />
-        <option value="$PROJECT_DIR$/resources/views/menu.twig" />
         <option value="$PROJECT_DIR$/resources/views/templates/partials/navigation.twig" />
         <option value="$PROJECT_DIR$/resources/views/home.twig" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/templates/partials/footer.twig" />
+        <option value="$PROJECT_DIR$/resources/views/menu.twig" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
       </list>
     </option>
   </component>
@@ -494,15 +484,15 @@
       <workItem from="1480252730283" duration="19478000" />
       <workItem from="1480275848050" duration="10106000" />
       <workItem from="1480286937336" duration="1361000" />
-      <workItem from="1480335329254" duration="16004000" />
+      <workItem from="1480335329254" duration="16734000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46949000" />
+    <option name="totallyTimeSpent" value="47679000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1066" extended-state="7" />
+    <frame x="1358" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -859,11 +849,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+    <entry file="file://$PROJECT_DIR$/resources/views/templates/partials/footer.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="2040" column="14" selection-start-line="2040" selection-start-column="14" selection-end-line="2040" selection-end-column="14" />
+        <state relative-caret-position="255">
+          <caret line="15" column="86" selection-start-line="15" selection-start-column="86" selection-end-line="15" selection-end-column="86" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/menu.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="987" column="42" selection-start-line="987" selection-start-column="42" selection-end-line="987" selection-end-column="54" />
+          <folding>
+            <element signature="e#33135#33195#0#HTML" expanded="true" />
+            <element signature="e#37929#37989#0#HTML" expanded="true" />
+            <element signature="e#49552#49612#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -875,22 +877,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/menu.twig">
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="666" column="0" selection-start-line="666" selection-start-column="0" selection-end-line="666" selection-end-column="0" />
-          <folding>
-            <element signature="e#33135#33195#0#HTML" expanded="true" />
-            <element signature="e#37929#37989#0#HTML" expanded="true" />
-            <element signature="e#49552#49612#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/templates/partials/footer.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="86" selection-start-line="15" selection-start-column="86" selection-end-line="15" selection-end-column="86" />
+        <state relative-caret-position="300">
+          <caret line="994" column="68" selection-start-line="994" selection-start-column="68" selection-end-line="994" selection-end-column="68" />
           <folding />
         </state>
       </provider>
