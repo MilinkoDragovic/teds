@@ -32,10 +32,10 @@ class HomeController
         return $view->render($response, 'gallery.twig');
     }
 
-    public function events(Request $request, Response $response, Twig $view)
+    public function specials(Request $request, Response $response, Twig $view)
     {
 
-        return $view->render($response, 'events.twig');
+        return $view->render($response, 'specials.twig');
     }
 
     public function contact(Request $request, Response $response, Twig $view)

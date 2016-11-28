@@ -14,16 +14,14 @@
         left: -90px;
     }
 
-    .roll-menu .food-discount .chef,
-    .roll-menu .food-discount .food-name,
-    .roll-menu .food-discount .discount-price {
+    .roll-menu .food-discount .combo,
+    .roll-menu .food-discount .food-name{
         width: 100%;
         float: none;
         text-align: left;
     }
 
-    .roll-menu .food-discount .food-name h3,
-    .roll-menu .food-discount .discount-price {
+    .roll-menu .food-discount .food-name h3{
         padding-left: 120px;
     }
 

@@ -12,7 +12,7 @@ $app->get('/menu', ['Ted\Controllers\HomeController', 'menu'])->setName('menu-pa
 $app->get('/gallery', ['Ted\Controllers\HomeController', 'gallery'])->setName('gallery-page');
 
 
-$app->get('/events', ['Ted\Controllers\HomeController', 'events'])->setName('events-page');
+$app->get('/specials', ['Ted\Controllers\HomeController', 'specials'])->setName('specials-page');
 
 
 $app->get('/contact', ['Ted\Controllers\HomeController', 'contact'])->setName('contact-page');

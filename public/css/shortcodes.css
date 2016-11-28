@@ -522,7 +522,7 @@
             border-radius: 40px 0 0 40px;
 }
 
-.roll-menu .food-discount .chef,
+.roll-menu .food-discount .combo,
 .roll-menu .food-discount .food-name,
 .roll-menu .food-discount .discount-price {
     font-family: "Raleway", sans-serif;
@@ -532,8 +532,8 @@
     color: #fff;
 }
 
-.roll-menu .food-discount .chef {
-    width: 30%;
+.roll-menu .food-discount .combo {
+    width: 49%;
 }
 
 .roll-menu .food-discount .food-name {
@@ -550,22 +550,13 @@
     margin: 0;
 }
 
-.roll-menu .food-discount .discount-price {
-    width: 24%;
-    text-align: right;
-}
-
-.roll-menu .food-discount .discount-price span {
-    font-weight: 700;
-}
-
-.roll-menu .food-discount .chef img {
+.roll-menu .food-discount .combo img {
     position: absolute;
     left: -6px;
     top: -25px;
 }
 
-.roll-menu .food-discount .chef h4 {
+.roll-menu .food-discount .combo h4 {
     font-size: 20px;
     line-height: 30px;
     color: #fff;
@@ -600,11 +591,11 @@
 .roll-menu .food-item .food-name,
 .roll-menu .food-item .food-detail {
     float: left;
-    width: 630px;
+    width: 600px;
 }
 
 .roll-menu .food-item .food-name {
-    width: 270px;
+    width: 300px;
 }
 
 .roll-menu .food-item .food-name h3 {
