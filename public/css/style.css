@@ -2037,3 +2037,9 @@ input[type="color"],
 	opacity: 1;
 	visibility: visible;
 }
+
+.history-text{
+	font-size: 14px;
+	line-height: 21px;
+	word-wrap: normal;
+}
