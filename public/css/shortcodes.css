@@ -552,8 +552,8 @@
 
 .roll-menu .food-discount .combo img {
     position: absolute;
-    left: -6px;
-    top: -25px;
+    left: -29px;
+    top: -29px;
 }
 
 .roll-menu .food-discount .combo h4 {
@@ -667,7 +667,7 @@
     text-decoration: none;
     width: 100%;
     z-index: 100;
-    background:rgba(228, 199, 121, 0.74);
+    background:rgba(213, 78, 51, 0.74);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     opacity: 0;

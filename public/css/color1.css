@@ -25,7 +25,7 @@ input[type="submit"],
 .roll-iconbox .icon,
 .roll-testimonials .name .live,
 .roll-newsletter #subscribe-msg .notification_error {
-    color: #b08e3b;
+    color: #d54e33;
 }
 
 /* Border Color
@@ -76,7 +76,7 @@ input[type="color"]:focus,
 .widget-search #s,
 .widget ul li,
 .post-wrap .pagi-normal ul li a {
-	border-color: #b08e3b;
+	border-color: #d54e33;
 }
 
 /* Background Color
@@ -106,7 +106,7 @@ input[type="color"]:focus,
 .flexslider .flex-control-nav li a.flex-active,
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span{
-    background-color: #b08e3b;
+    background-color: #d54e33;
 }
 
 /* Shadow Color
@@ -122,7 +122,7 @@ input[type="color"]:focus,
 .post .more-link a:hover,
 .post-wrap .pagi-normal ul li a:hover,
 .post-wrap .pagi-normal ul li.active a {
-    -webkit-box-shadow: 0 0 0 26px #b08e3b inset;
-       -moz-box-shadow: 0 0 0 26px #b08e3b inset;
-            box-shadow: 0 0 0 26px #b08e3b inset;
+    -webkit-box-shadow: 0 0 0 26px #d54e33 inset;
+       -moz-box-shadow: 0 0 0 26px #d54e33 inset;
+            box-shadow: 0 0 0 26px #d54e33 inset;
 }
