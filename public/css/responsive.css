@@ -129,9 +129,9 @@
     }
 
     .roll-button,
-    .post .more-link a,
+    .food .more-link a,
     .roll-callout-box .buttons a,
-    .posts-masonry .load-more a,
+    .daily-special .load-more a,
     .galleries-masonry .load-more a {
         padding: 12px 50px;
     }
@@ -191,11 +191,11 @@
         padding: 0;
     }
 
-    .post-wrap .post {
+    .food-wrap .food {
         padding-top: 50px;
     }
 
-    .post .title-post {
+    .food .title-post {
         font-size: 36px;
     }
 
@@ -211,7 +211,7 @@
         display: none;
     }
 
-    .posts-masonry .posts-container .item {
+    .daily-special .daily-food .item {
         width: 50%;
     }
 
@@ -232,7 +232,7 @@
         padding-top: 30px;
     }
 
-    .posts-masonry .posts-container .item,
+    .daily-special .daily-food .item,
     .galleries-masonry .galleries-container .item {
         width: 50%;
     }
@@ -338,8 +338,8 @@
 
     .roll-button,
     .roll-callout-box .buttons a,
-    .post .more-link a,
-    .posts-masonry .load-more a,
+    .food .more-link a,
+    .daily-special .load-more a,
     .galleries-masonry .load-more a {
         padding: 12px 40px;
     }
@@ -362,11 +362,11 @@
         text-align: center;
     }
 
-    .post-wrap .post {
+    .food-wrap .food {
         padding-top: 40px;
     }
 
-    .post .title-post {
+    .food .title-post {
         font-size: 30px;
         line-height: 36px;
     }
@@ -382,8 +382,8 @@
         line-height: 48px;
     }
 
-    .posts-masonry .posts-container .item,
-    .posts-masonry .posts-container .item.w2 {
+    .daily-special .daily-food .item,
+    .daily-special .daily-food .item.w2 {
         width: 100%;
     }
 
@@ -484,41 +484,41 @@
     }
 
     .roll-button,
-    .post .more-link a,
+    .food .more-link a,
     .roll-callout-box .buttons a,
-    .posts-masonry .load-more a,
+    .daily-special .load-more a,
     .galleries-masonry .load-more a {
         padding: 10px 30px;
     }
 
-    .post .main-post {
+    .food .main-post {
         margin-left: 96px;
     }
 
-    .post .type-post {
+    .food .type-post {
         margin-right: 26px;
     }
 
-    .post .title-post {
+    .food .title-post {
         font-size: 20px;
         line-height: 28px;
         margin: -4px 0 10px;
     }
 
-    .post .meta-post {
+    .food .meta-post {
         font-size: 14px;
         margin-bottom: 14px;
     }
 
-    .post .more-link a {
+    .food .more-link a {
         padding: 10px 30px;
     }
 
-    .post .type-post {
+    .food .type-post {
         display: none;
     }
 
-    .post .main-post {
+    .food .main-post {
         margin-left: 0;
     }
 
@@ -527,7 +527,7 @@
         width: 50px;
     }
 
-    .post .entry-post blockquote {
+    .food .entry-post blockquote {
         width: 100%;
     }
 
@@ -567,8 +567,8 @@
         background-size: 2px 2px;
     }
 
-    .posts-masonry .featured-post .link,
-    .galleries-masonry .featured-post .link,
+    .daily-special .content-of-food .link,
+    .galleries-masonry .content-of-food .link,
     .roll-team .link,
     .roll-posts-carousel .item .link {
         background: url(../images/link@2x.png) no-repeat center center;

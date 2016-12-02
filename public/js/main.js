@@ -1,25 +1,3 @@
-/**
- * removePreloader
- * postCarousel
- * testimonialCarousel
- * topSlider
- * blogSlider
- * blogMasonry
- * galleryMasonry
- * ajaxContactForm
- * foodIsotope
- * parallax
- * rollAnimation
- * goTop
- * lastestTweets
- * flickrFeed
- * detectViewport
- * popupTeam
- * gmapSetup
- * ajaxSubscribe
- * responsiveMenu
- * spacingMenu
- */
 
 ;(function($) {
 
@@ -114,81 +92,57 @@
         }
     };
 
-    var blogSlider = function() {
-        if ( $().flexslider ) {
-            $('.blog-slider').each(function() {
-                var $this = $(this),
-                    easing = ( $this.data('effect') == 'fade' ) ? 'linear' : 'easeInOutExpo';
 
-                $this.find('.flexslider').flexslider({
-                    animation      :  $this.data('effect'),
-                    direction      :  $this.data('direction'), // vertical
-                    pauseOnHover   :  true,
-                    useCSS         :  false,
-                    easing         :  easing,
-                    animationSpeed :  500,
-                    slideshowSpeed :  5000,
-                    controlNav     :  true,
-                    directionNav   :  $this.data('nav'),
-                    slideshow      :  $this.data('auto'),
-                    prevText       :  '<i class="fa fa-angle-left"></i>',
-                    nextText       :  '<i class="fa fa-angle-right"></i>',
-                    smoothHeight   :  true
-                }); // flexslider
-            }); // blog-sider
+    $(function () {
+
+        var today = new Date();
+        var dayIndex = today.getDay();
+        if( dayIndex == 1 && dayIndex == 7){
+            var day = $(".mon");
+            $(day).addClass("active");
+        }else if(dayIndex == 2){
+            var day = $(".tue");
+            $(day).addClass("active");
+        }else if(dayIndex == 3){
+            var day = $(".wed");
+            $(day).addClass("active");
+        }else if(dayIndex == 4){
+            var monnday = $(".thu");
+            $(monnday).addClass("active");
+        }else if(dayIndex == 5){
+            var monnday = $(".fri");
+            $(monnday).addClass("active");
+        }else if(dayIndex == 6){
+            var monnday = $(".sat");
+            $(monnday).addClass("active");
         }
-    };
+        //console.log(dayIndex);
 
-    var blogMasonry = function() {
+    });
+
+
+    var foodMasonry = function() {
         if ( $().isotope ) {
-            var $container = $('.posts-container');
+            var $container = $('.daily-food');
 
             $container.imagesLoaded(function(){
                 $container.isotope({
-                    itemSelector: '.post',
-                    transitionDuration: '0.8s'
+                    itemSelector: '.food',
+                    transitionDuration: '0.8s',
+                    hiddenStyle: { opacity: 0 },
+                    visibleStyle: { opacity: 1 }
                 }); // isotope
             });
 
-            $('.post-filter li').on('click',function() {
+            $('.days li').on('click',function() {
                 var selector = $(this).find("a").attr('data-filter');
 
-                $('.post-filter li').removeClass('active');
+                $('.days li').removeClass('active');
                 $(this).addClass('active');
                 $container.isotope({ filter: selector });
 
                 return false;
-            }).filter('.active').trigger('click'); // filter
-
-            $('.posts-masonry .load-more a').on('click', function(e) {
-                e.preventDefault();
-
-                var el = $(this),
-                    url = el.attr('href'),
-                    page = parseInt(el.attr('data-page'), 10);
-
-                el.addClass('loading').text('Loading...');
-
-                $.ajax({
-                        type: "GET",
-                        url: url,
-                        dataType: "html",
-                        async: false,   // wait result
-                        data : { page : page }
-                    })
-                    .done(function (data) {
-                        if ( data != null ) {
-                            var newitem = $(data);
-                            $container.append(newitem).isotope('appended', newitem);
-                            el.removeClass('loading').text('Load more');
-                            page = page + 1;
-                            el.attr({'data-page': page, 'href': './ajax/b' + page + '.html'});
-                        }
-                    })
-                    .fail(function () {
-                        el.text('No more posts to load.');
-                    })
-            });
+            }).filter('.active').trigger('click'); // end filter
 
         };
     };
@@ -244,65 +198,14 @@
                         }
                     })
                     .fail(function () {
-                        el.text('No more posts to load.');
+                        el.text('No more Food to load.');
                     })
             });
 
         };
     };
 
-    var ajaxContactForm = function() {
-        if ( $().validate ) {
-            $('.roll-contact-form').each(function() {
-                $(this).validate({
-                    submitHandler: function( form ) {
-                        var $form = $(form),
-                            str = $form.serialize(),
-                            loading = $('<div />', { 'class': 'loading' });
 
-                        $.ajax({
-                            type: "POST",
-                            url:  $form.attr('action'),
-                            data: str,
-                            beforeSend: function () {
-                                $form.find('.send-wrap').prepend(loading);
-                                $form.find('.roll-alert').remove();
-                            },
-                            success: function( msg ) {
-                                var result, cls;
-
-                                if ( msg == 'Success' ) {
-                                    result = 'Your message has been sent. Thank you!';
-                                    cls = 'msg-success';
-                                } else {
-                                    result = 'Error sending email.';
-                                    cls = 'msg-error';
-                                }
-
-                                $form.prepend(
-                                    $('<div />', {
-                                        'class': 'roll-alert ' + cls,
-                                        'text' : result
-                                    }).append(
-                                        $('<a class="remove" href="#"><i class="fa fa-close"></i></a>')
-                                    )
-                                );
-
-                                $form.find(':input').not('.submit').val('');
-                            },
-                            complete: function( xhr, status, error_thrown ) {
-                                $form.find('.loading').remove();
-                            }
-                        });
-                    }
-                });
-            });
-        }
-        $(document).on('click', '.roll-alert .remove', function(e) {
-            $(this).closest('.roll-alert').remove();
-            e.preventDefault();
-        })
-    };
 
     var foodIsotope = function() {
         if ( $().isotope ) {
@@ -325,13 +228,8 @@
                 $container.isotope({ filter: selector });
 
                 return false;
-            }).filter(':nth-child(2)').trigger('click'); // end filter
+            }).filter(':nth-child(1)').trigger('click'); // end filter
 
-            $container.find('.added').mouseenter(function(){
-                $(this).find('.add-cart').text('Remove');
-            }).mouseleave(function(){
-                $(this).find('.add-cart').text('Added');
-            })
         };
     };
 
@@ -398,179 +296,11 @@
         });
     };
 
-    var lastestTweets = function() {
-        $('.latest-tweets').each(function() {
-            var $this = $(this);
-
-            if ( $().tweet ) {
-                $this.tweet({
-                    username: $this.data('username'),
-                    join_text: "auto",
-                    avatar_size: null,
-                    count: $this.data('number'),
-                    template: "{text}{time}",
-                    loading_text: "loading tweets...",
-                    modpath: $this.data('modpath')
-                }); // tweet
-            }
-            if ( $().newsTicker ) {
-                $this.children('.tweet_list').newsTicker({
-                    row_height: 40,
-                    max_rows: $this.data('scroll'),
-                    duration: 4000
-                });
-            }
-        }); // lastest-tweets each
-    };
-
-    var flickrFeed = function() {
-        if ( $().jflickrfeed ) {
-            $('.flickr-photos').each( function() {
-                $(this).jflickrfeed({
-                    limit: 6,
-                    qstrings: {
-                        id: '130700496@N03' // Your Flickr Id
-                    },
-                    itemTemplate: '<li><a href="{{link}}" title="{{title}}" target="_blank"><img src="{{image_s}}" alt="{{title}}" /></a></li>'
-                });
-            });
-        }
-    };
 
     var detectViewport = function() {
         $('[data-waypoint-active="yes"]').waypoint(function() {
             $(this).trigger('on-appear');
         }, { offset: '90%', triggerOnce: true });
-    };
-
-    var popupTeam = function() {
-        if ( $().leanModal ) {
-            $('.roll-team > .popup').leanModal({
-                top: 300,
-                overlay: 0.8,
-                closeButton: ".close-modal"
-            });
-
-            $('.close-modal').on('click', function(e){
-                e.preventDefault();
-            })
-        }
-    };
-
-    var gmapSetup = function() {
-        if ( $().gmap3 ) {
-            $("#map").gmap3({
-                map:{
-                    options:{
-                        zoom: 14,
-                        mapTypeId: 'burger_house_style',
-                        mapTypeControlOptions: {
-                            mapTypeIds: ['orches_style', google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID]
-                        },
-                        scrollwheel: false
-                    }
-                },
-                getlatlng:{
-                    address:  "3 London Rd London SE1 6JZ United Kingdom",
-                    callback: function(results) {
-                        if ( !results ) return;
-                        $(this).gmap3('get').setCenter(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
-                        $(this).gmap3({
-                            marker:{
-                                latLng:results[0].geometry.location
-                            }
-                        });
-                    }
-                },
-                styledmaptype:{
-                    id: "burger_house_style",
-                    options:{
-                        name: "Burger House Map"
-                    },
-                },
-            });
-        }
-    };
-
-    var ajaxSubscribe = {
-        obj: {
-            subscribeEmail    : $('#subscribe-email'),
-            subscribeButton   : $('#subscribe-button'),
-            subscribeMsg      : $('#subscribe-msg'),
-            subscribeContent  : $("#subscribe-content"),
-            dataMailchimp     : $('#subscribe-form').attr('data-mailchimp'),
-            success_message   : '<div class="notification_ok">Thank you for joining our mailing list! Please check your email for a confirmation link.</div>',
-            failure_message   : '<div class="notification_error">Error! <strong>There was a problem processing your submission.</strong></div>',
-            noticeError       : '<div class="notification_error">{msg}</div>',
-            noticeInfo        : '<div class="notification_error">{msg}</div>',
-            basicAction       : 'mail/subscribe.php',
-            mailChimpAction   : 'mail/subscribe-mailchimp.php'
-        },
-
-        eventLoad: function() {
-            var objUse = ajaxSubscribe.obj;
-
-            $(objUse.subscribeButton).on('click', function() {
-                if ( window.ajaxCalling ) return;
-                var isMailchimp = objUse.dataMailchimp === 'true';
-
-                if ( isMailchimp ) {
-                    ajaxSubscribe.ajaxCall(objUse.mailChimpAction);
-                } else {
-                    ajaxSubscribe.ajaxCall(objUse.basicAction);
-                }
-            });
-        },
-
-        ajaxCall: function (action) {
-            window.ajaxCalling = true;
-            var objUse = ajaxSubscribe.obj;
-            var messageDiv = objUse.subscribeMsg.html('').hide();
-            $.ajax({
-                url: action,
-                type: 'POST',
-                dataType: 'json',
-                data: {
-                    subscribeEmail: objUse.subscribeEmail.val()
-                },
-                success: function (responseData, textStatus, jqXHR) {
-                    if ( responseData.status ) {
-                        objUse.subscribeContent.fadeOut(500, function () {
-                            messageDiv.html(objUse.success_message).fadeIn(500);
-                        });
-                    } else {
-                        switch (responseData.msg) {
-                            case "email-required":
-                                messageDiv.html(objUse.noticeError.replace('{msg}','Error! Email is required.'));
-                                break;
-                            case "email-err":
-                                messageDiv.html(objUse.noticeError.replace('{msg}','Error! Email invalid.'));
-                                break;
-                            case "duplicate":
-                                messageDiv.html(objUse.noticeError.replace('{msg}','Error! Email is duplicate.'));
-                                break;
-                            case "filewrite":
-                                messageDiv.html(objUse.noticeInfo.replace('{msg}','Error! Mail list file is open.'));
-                                break;
-                            case "undefined":
-                                messageDiv.html(objUse.noticeInfo.replace('{msg}','Error! undefined error.'));
-                                break;
-                            case "api-error":
-                                objUse.subscribeContent.fadeOut(500, function () {
-                                    messageDiv.html(objUse.failure_message);
-                                });
-                        }
-                        messageDiv.fadeIn(500);
-                    }
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    alert('Connection error');
-                },
-                complete: function (data) {
-                    window.ajaxCalling = false;
-                }
-            });
-        }
     };
 
     var responsiveMenu = function() {
@@ -637,14 +367,9 @@
         testimonialCarousel();
         postCarousel();
         topSlider();
-        popupTeam();
-        blogSlider();
-        blogMasonry();
+        foodMasonry();
         galleryMasonry();
-        ajaxContactForm();
         foodIsotope();
-        ajaxSubscribe.eventLoad();
-        flickrFeed();
         spacingMenu()
         rollAnimation();
         goTop();
@@ -652,8 +377,8 @@
         detectViewport();
         parallax();
         removePreloader();
-        lastestTweets();
-        gmapSetup();
     });
+
+
 
 })(jQuery);
