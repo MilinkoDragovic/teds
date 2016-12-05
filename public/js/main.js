@@ -92,12 +92,11 @@
         }
     };
 
-
     $(function () {
 
         var today = new Date();
         var dayIndex = today.getDay();
-        if( dayIndex == 1 && dayIndex == 7){
+        if( dayIndex == 1 || dayIndex == 0){
             var day = $(".mon");
             $(day).addClass("active");
         }else if(dayIndex == 2){
@@ -116,9 +115,10 @@
             var monnday = $(".sat");
             $(monnday).addClass("active");
         }
-        //console.log(dayIndex);
+        console.log(dayIndex);
 
     });
+
 
 
     var foodMasonry = function() {
@@ -378,6 +378,8 @@
         parallax();
         removePreloader();
     });
+
+
 
 
 
