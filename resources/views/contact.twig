@@ -1,1 +1,159 @@
 {% extends 'templates/app.twig' %}
+
+
+{% block content %}
+    <section class="page-slider parallax-bg3 parallax">
+        <div class="mask"></div>
+
+        <div class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcrumbs">
+                            <a href="#">Home</a> / Contact
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="entry-page">
+        <section class="roll-row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="roll-titlebox">
+                            <h1 class="maintitle">If you have <strong>questions</strong> please <strong>contact
+                                    us!</strong></h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur libero
+                                nisi, vitae sodales augue pellentesque eu. Duis ac lacinia neque, sit amet imperdiet
+                                mauris. Aliquam semper sed purus eget sagittis. Duis eget consequat nisl. Ut commodo non
+                                nunc quis luctus. Maecenas non varius nibh. In luctus libero consequat, fermentum risus
+                                a, commodo justo.</p>
+                        </div>
+                        <div class="roll-spacer large"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="roll-iconbox">
+                            <div class="icon">
+                                <img src="/../ted/public/images/address@2x.png" alt="image">
+                            </div>
+                            <h3>Address</h3>
+                            <p>8625 Monroe Rd Charlotte,<br>NC 28212, United States</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="roll-iconbox">
+                            <div class="icon">
+                                <img src="/../ted/public/images/email@2x.png" alt="image">
+                            </div>
+                            <h3>E-mail</h3>
+                            <p>contact@tedsrestaurant.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="roll-iconbox">
+                            <div class="icon">
+                                <img src="/../ted/public/images/phone@2x.png" alt="image">
+                            </div>
+                            <h3>Phone</h3>
+                            <p>Contact: (704) 568 - 6624<br> (704) 568 - 6625</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="roll-iconbox">
+                            <div class="icon">
+                                <img src="/../ted/public/images/open@2x.png" alt="image">
+                            </div>
+                            <h3>Working hours</h3>
+                            <p>Monday - Friday: 10:30 am - 9:00 pm<br>Saturday: 10:30 am - 3:00 am<br>Closed Sunday</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="map" style="width: 100%; height: 350px;">
+        </div>
+        <script>
+            function initMap() {
+                var uluru = {lat: 35.152059, lng: -80.745595};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 17,
+                    center: uluru
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                });
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkEiKvQae0HuIr0Proz9y-cpK_FcYKBXI&callback=initMap">
+        </script>
+
+        <div class="form-contact-section">
+            <section class="roll-row">
+                <div class="aside-image">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="content-wrap form-wrap">
+                                    <h2 class="form-title text-right text-white">Use the <strong>contact form</strong>
+                                    </h2>
+                                    <form class="roll-contact-form" method="post"
+                                          action="./contact/contact-process.php">
+                                        <div class="input-wrap">
+                                            <input type="text" value="" tabindex="1" placeholder="Name *" name="name"
+                                                   id="name" required>
+                                        </div>
+                                        <div class="input-wrap">
+                                            <input type="email" value="" tabindex="2" placeholder="Email *" name="email"
+                                                   id="email" required>
+                                        </div>
+                                        <div class="message-wrap">
+                                            <textarea class="" tabindex="3" placeholder="Message *" name="message"
+                                                      id="message" required></textarea>
+                                        </div>
+                                        <div class="send-wrap">
+                                            <input type="submit" value="Send message" id="submit" name="submit"
+                                                   class="submit roll-button border white">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <section class="roll-row parallax parallax-bg5">
+            <div class="mask"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="content-section">
+                        <div class="col-md-12">
+                            <div class="roll-callout-box">
+                                <div class="callout-wrap">
+                                    <div class="content">
+                                        <h3 class="text-white"><strong>Thank you</strong> and welcome<br>back to
+                                            <strong>our place!</strong></h3>
+                                    </div>
+                                    <div class="buttons">
+                                        <a href="{{ path_for('home-page') }}" class="roll-button border white">Home</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+{% endblock %}

@@ -21,6 +21,14 @@
     <!-- Bootstrap  -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
+
+    <!-- Fancy Box -->
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
+
+    <link rel="stylesheet" href="js/fancybox/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+
+    <link rel="stylesheet" href="js/fancybox/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+
     <!-- Theme Style -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -39,11 +47,11 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700' rel='stylesheet' type='text/css'>
 
     <!-- Favicon and touch icons  -->
-    <link href="icon/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-    <link href="icon/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-    <link href="icon/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-    <link href="icon/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
-    <link href="icon/favicon.png" rel="shortcut icon">
+    <link href="/../ted/public/images/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/../ted/public/images/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="/../ted/public/images/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="/../ted/public/images/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="/../ted/public/images/favicon.png" rel="shortcut icon">
 
 </head>
 
@@ -83,6 +91,18 @@
 <script type="text/javascript" src="js/smoothscroll.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/menu.js"></script>
-</body>
 
+<script type="text/javascript" src="js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="js/fancybox/helpers/jquery.fancybox-buttons.js"></script>
+<script type="text/javascript" src="js/fancybox/helpers/jquery.fancybox-media.js"></script>
+<script type="text/javascript" src="js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+    });
+</script>
+
+</body>
 </html>

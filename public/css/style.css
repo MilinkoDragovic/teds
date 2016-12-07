@@ -2052,3 +2052,155 @@ input[type="color"],
 	background-color: #ececec;
 	width: 100%;
 }
+
+
+.galleries-masonry .galleries-container .item.w3 {
+	width: 33.33%;
+}
+
+
+
+
+.galleries-masonry .featured-post img {
+	width: 100%;
+}
+
+.galleries-masonry ul.gallery-filter {
+	text-align: center;
+	list-style: none;
+	margin: 0 0 20px;
+}
+
+
+.galleries-masonry ul.gallery-filter li {
+	display: inline-block;
+	margin: 0 7px 7px 0;
+}
+
+
+.galleries-masonry ul.gallery-filter li a {
+	display: inline-block;
+	border-width: 1px;
+	border-style: solid;
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #767070;
+	outline: 0;
+}
+
+.galleries-masonry ul.gallery-filter li a:hover,
+.galleries-masonry ul.gallery-filter li.active a {
+	border-width: 1px;
+	border-style: solid;
+	color: #fff;
+}
+
+
+.galleries-masonry ul.gallery-filter li.active a {
+	cursor: default;
+}
+
+
+.galleries-masonry .featured-post {
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+.galleries-masonry .featured-post {
+	border: 2px solid #ececec;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.galleries-masonry .gallery:hover .featured-post {
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.35);
+}
+
+
+.galleries-masonry .featured-post .link {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 68px;
+	height: 68px;
+	border: 2px solid #fff;
+	margin: -35px 0 0 -35px;
+	background: url(../images/link.png) no-repeat center center;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	-ms-transform: rotate(60deg);
+	-o-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+
+.galleries-masonry .featured-post:hover .link {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+
+
+.galleries-masonry .featured-post img {
+	display: inline;
+	max-width: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+
+.galleries-masonry .gallery:hover .featured-post img {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	ransform: scale(1.1);
+}
+
+
+.galleries-masonry .featured-post a .overlay {
+	height: 100%;
+	position: absolute;
+	text-decoration: none;
+	width: 100%;
+	z-index: 100;
+	background: rgba(255,18,0,0.85);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+
+.galleries-masonry .gallery:hover .overlay {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+

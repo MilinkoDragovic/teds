@@ -115,7 +115,7 @@
             var monnday = $(".sat");
             $(monnday).addClass("active");
         }
-        console.log(dayIndex);
+        //console.log(dayIndex);
 
     });
 
@@ -146,6 +146,7 @@
 
         };
     };
+
 
     var galleryMasonry = function() {
         if ( $().isotope ) {
@@ -192,19 +193,19 @@
                                 newitem = $(data).find('.w3');
 
                             $container.append(newitem).isotope('appended', newitem);
-                            el.removeClass('loading').text('Load more');
+                            el.removeClass('loading').text('Load more photos');
                             page = page + 1;
                             el.attr({'data-page': page, 'href': './ajax/g' + page + '.html'});
+                            $(".roll-button").hide();
                         }
                     })
                     .fail(function () {
-                        el.text('No more Food to load.');
+                        el.text('No more photos to load.');
                     })
             });
 
         };
     };
-
 
 
     var foodIsotope = function() {
